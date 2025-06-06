@@ -19,9 +19,7 @@ An AI-powered chatbot that helps users discover and plan trips across India. Fea
 ✅ 3. Installation & Usage (Reformatted for Clarity)
 Use clear sections with bash code blocks.
 
-md
-Copy
-Edit
+
 ## 🚀 Getting Started
 
 ### 🔧 Prerequisites
@@ -44,23 +42,20 @@ pip install -r requirements.txt
 🔑 Set Environment Variables
 Create a .env file in the root directory:
 
-env
-Copy
-Edit
+```
+```bash
 GROQ_API_KEY=your_groq_api_key_here
+```
 ▶️ Run the App
-bash
-Copy
-Edit
+```bash
 uvicorn main:app --reload
+```
 Open your browser: http://localhost:8000
 
 🧠 Vector Store Setup
 To use your own tourism data:
 
-bash
-Copy
-Edit
+
 # Replace 'your_data.txt' with your custom tourism content
 # Run the vector generation script (provide if available)
 
