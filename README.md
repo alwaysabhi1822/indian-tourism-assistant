@@ -56,10 +56,11 @@ Open your browser: http://localhost:8000
 To use your own tourism data:
 
 
-# Replace 'your_data.txt' with your custom tourism content
-# Run the vector generation script (provide if available)
-
+Replace 'your_data.txt' with your custom tourism content
+Run the vector generation script 
+```bash
 python generate_vectors.py
+```
 Make sure vectors.pkl is generated and placed in the root directory.
 
 🛠️ Tech Stack
