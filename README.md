@@ -16,54 +16,62 @@ An AI-powered chatbot that helps users discover and plan trips across India. Fea
 - 📱 Mobile-responsive design
 - 🌐 Real-time information retrieval
 
-- Install dependencies:
-pip install -r requirements.txt
+✅ 3. Installation & Usage (Reformatted for Clarity)
+Use clear sections with bash code blocks.
 
-Set up environment:
-"GROQ_API_KEY=your_groq_api_key_here" 
+md
+Copy
+Edit
+## 🚀 Getting Started
 
-Run application:
-uvicorn main:app --reload
+### 🔧 Prerequisites
+- Python 3.8+
+- GROQ API key (create at [groq.com](https://groq.com))
 
-Access at:
-http://localhost:8000
+### 📦 Installation
 
-Dependencies
-Frontend: Bootstrap, FontAwesome, Animate.css
-Backend: FastAPI, LangChain, Groq API
-AI: Llama3-70b model
-
-
-
-### Important Notes:
-
-1. **Vector Store Generation**:
-- Users should create their own `vectors.pkl` using the script in the README
-- Replace `your_data.txt` with their custom tourism data
-
-2. **Security**:
-- The `.gitignore` excludes sensitive files (`.env`, `*.pkl`)
-- Users must obtain their own [Groq API key](https://console.groq.com/)
-
-3. **Customization Points**:
-- Background image (`static/tour.webp`)
-- Prompt template in `main.py`
-- CSS variables in `tourismui.html`
-- Safety/packing logic in `main.py`
-
-4. **How to Run**:
 ```bash
-# Create virtual environment (recommended)
+# Clone the repo
+git clone https://github.com/yourusername/india-tourism-chatbot.git
+cd india-tourism-chatbot
+
+# Create virtual environment
 python -m venv venv
-source venv/bin/activate  # Linux/Mac
-venv\Scripts\activate    # Windows
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 # Install dependencies
 pip install -r requirements.txt
+🔑 Set Environment Variables
+Create a .env file in the root directory:
 
-# Add Groq API key to .env
-echo "GROQ_API_KEY=your_key_here" > .env
-
-# Run application
+env
+Copy
+Edit
+GROQ_API_KEY=your_groq_api_key_here
+▶️ Run the App
+bash
+Copy
+Edit
 uvicorn main:app --reload
+Open your browser: http://localhost:8000
+
+🧠 Vector Store Setup
+To use your own tourism data:
+
+bash
+Copy
+Edit
+# Replace 'your_data.txt' with your custom tourism content
+# Run the vector generation script (provide if available)
+
+python generate_vectors.py
+Make sure vectors.pkl is generated and placed in the root directory.
+
+🛠️ Tech Stack
+Layer	Technology
+Frontend	HTML, Bootstrap, Animate.css, JS
+Backend	FastAPI, LangChain, Groq API
+AI Models	Llama3-70B via Groq
+Embeddings	HuggingFace - all-MiniLM-L6-v2
+Storage	FAISS Vector Store (Pickle format)
 
